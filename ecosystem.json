@@ -1,0 +1,27 @@
+{
+  "apps": [
+    {
+      "name": "omk-admin",
+      "script": "./bin/server.js",
+      "instances": 1,
+      "exec_mode": "fork_mode",
+      "env": {
+        "NODE_ENV": "production",
+        "PORT": 4050,
+        "APIPORT": 3041,
+        "NODE_PATH": "./src"
+      }
+    },
+    {
+      "name": "omk-admin-api",
+      "script": "./bin/api.js",
+      "instances": 1,
+      "exec_mode": "fork_mode",
+      "env": {
+        "NODE_ENV": "production",
+        "APIPORT": 3041,
+        "NODE_PATH": "./api"
+      }
+    }
+  ]
+}
